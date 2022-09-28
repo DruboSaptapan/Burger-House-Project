@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: overlay;
+    overflow-x: hidden;
+    
+}
+::selection{
+    background-color: rgba(61, 37, 20, 0.85);
+    color: #fff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* header css */
+.header {
+    background-image: url("../image/header-bg.jpg");
+    margin-bottom: 90px;
+}
+.header h1{
+    font-size: 6.5em;
+    font-family: 'Alfa Slab One', cursive;
+}
+.header h3{
+    font-size: 3.2em;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.burger-text {
+    color: #3d2514 !important;
+}
+
+.red-box {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.red-box>p {
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.3em;
+    text-transform: uppercase;
+}
+
+.ads, .menu{
+    margin: 100px 0;
+}
+
+.burger-grid {
+    display: grid;
+    height: 400px;
+    grid-gap: 25px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.burger-grid .ad-1 {
+    color: #fff;
+    grid-row: 1/ span2;
+    grid-column: 1/2;
+    background-image: url("../image/1.burger.jpg");
+    background-repeat: no-repeat;
+}
+
+.burger-grid .ad-2 {
+    color: #fff;
+    grid-column: 2/3;
+    grid-row: -3/2;
+    background-image: url("../image/2.burger.jpg");
+    background-repeat: no-repeat;
+}
+
+.burger-grid .ad-3 {
+    color: #fff;
+    grid-column: 2/3;
+    grid-row: -2/4;
+    margin-top: 6px;
+    background-image: url("../image/3.burger.jpg");
+    background-repeat: no-repeat;
+}
+
+/* upcoming events */
+.events-img{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* team css style */
+.team {
+    margin: 100px 0;
+    background: rgba(255, 255, 255, 0.199);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.member .card h4 {
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* owl carousel */
+.owl-nav, .owl-dots {
+    display: none !important;
+}
+
+/* footer */
+.footer{
+    background-image: url(../image/footer_bg.jpg);
+    font-size: 17px;
+    width: 100%;
+    height: 525px;
+}
+.footer-logo-img{
+    width: fit-content;
+    margin: 0 auto;
+}
+.footer .footer-left-side{
+    padding-left: 85px;
+}
+.footer p{
+    font-family: 'Montserrat', sans-serif !important;
+}
+.footer .footer-text{
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+.footer .info i{
+    color: #fff; 
+    font-size: 34px;
+}
+.footer .info p{
+    color: #fff;
+    font-size: 17px;
+    margin-block: 5px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.goTop{
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    left: 92%;
+    animation: animate1 0.4s ease-in-out infinite alternate;
+}
+@keyframes animate1 {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(-15px);
+    }
+}
+
+.goTop i{
+    color: rgba(253, 198, 79, 0.85);
+    font-size: 56px;
+}
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+    .header h1{
+        font-size: 5em !important;
+    }
+    .burger-grid {
+        display: grid;
+        height: 418px;
+        grid-gap: 25px;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .burger-grid .ad-2 {
+        grid-row: 1/ span2;
+        grid-column: 1/3;
+    }
+
+    .burger-grid .ad-2 {
+        display: none;
+    }
+
+    .burger-grid .ad-3 {
+        display: none;
+    }
+
+    .events-img{
+        border-radius: 15px;
+    }
+
+    .member img{
+        width: 60% !important;
+    }
+
+    .footer{
+        height: 625px;
+    }
+
+    .footer .footer-left-side{
+        margin-top: 20px;
+        padding-left: 15px;
+    }
+
+    .footer .footer-text{
+        margin-top: 48px;
+    }
+    .goTop{
+        bottom: 20px;
+        right: 50px;
+        left: 79%;
+    }
+}
